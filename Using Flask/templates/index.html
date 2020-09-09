@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Forest Fire Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/styles/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/styles/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ML Flask Basic</a>
+      <ul class="right hide-on-med-and-down">
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Forest Fire Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A Web App to predict Forest Fire Prediction using Logistic Regression</h5>
+      </div>
+     
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+                <label for="first_name"><b>Temperature</b></label>
+                <br>
+              <input name="Temperature" id="first_name" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+    
+              <label for="last_name"><b>Oxygen </b></label>
+                <br>
+              <input id="last_name" name="Oxygen"  type="text" class="validate">
+    
+            </div>
+    
+            <div class="input-field col s4">
+                <label for="_name"><b>Humidity</b></label>
+                <br>
+              <input id="_name" name="Humidity" type="text" class="validate">
+    
+            </div>
+    
+          </div>
+    
+          <div class="row center">
+    
+              <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+              <br><h4 style="text-align: center;"><strong>{{pred}}</strong></h4>
+              <br>
+          </div>
+        </form>
+          </div>
+
+
+  
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../static/js/materialize.min.js"></script>
+  <script src="../static/js/init.js"></script>
+
+  </body>
+</html>
